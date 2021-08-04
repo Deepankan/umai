@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:destory, :update, :show]
 
   def index
-    render json: { status: 200, posts: Post.all, author_post: current_user ? current_user.posts : 'Not signed in.', author: current_user.email, message: 'Post fetch successfully.' }, status: :ok
+    render json: { status: 200, posts: Post.all, author_post: current_user ? current_user.posts : 'Not signed in.', message: 'Post fetch successfully.' }, status: :ok
   end
 
   def create

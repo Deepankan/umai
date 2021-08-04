@@ -15,7 +15,7 @@ puts "***************** Creating User End ***************************"
 
 
 puts "***************** Creating Post Start ***************************"
-20000.times do
+2000.times do
   Post.create(user_id: User.order('RANDOM()').first.id, title: Faker::Name.name, content: Faker::Quote.famous_last_words, ip: Faker::Internet.ip_v4_address )
 end
 puts "***************** Creating Post End ***************************"
@@ -23,7 +23,7 @@ puts "***************** Creating Post End ***************************"
 
 puts "***************** Creating Rating for Post Start ***************************"
 
-20000.times do
+2000.times do
   Rating.create(post_id: User.order('RANDOM()').first.id, user_id: User.order('RANDOM()').first.id, value: [0,1,2,3,4].sample)
 end
 puts "***************** Creating Rating for Post End ***************************"
